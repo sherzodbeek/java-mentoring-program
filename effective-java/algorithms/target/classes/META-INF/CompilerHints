@@ -1,0 +1,9 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,com/learning/benchmark/BenchmarkTests.testBinarySearchIterative
+inline,com/learning/benchmark/BenchmarkTests.testBinarySearchRecursive
+inline,com/learning/benchmark/BenchmarkTests.testInsertionSort
+inline,com/learning/benchmark/BenchmarkTests.testMergeSort

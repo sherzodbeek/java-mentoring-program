@@ -1,0 +1,4 @@
+JMH S 37 com.learning.benchmark.BenchmarkTests S 85 com.learning.benchmark.jmh_generated.BenchmarkTests_testBinarySearchIterative_jmhTest S 25 testBinarySearchIterative S 11 AverageTime E A 1 1 1 E E E E E E E I 1 1 I 1 1 E E E E E U 11 NANOSECONDS E E 
+JMH S 37 com.learning.benchmark.BenchmarkTests S 85 com.learning.benchmark.jmh_generated.BenchmarkTests_testBinarySearchRecursive_jmhTest S 25 testBinarySearchRecursive S 11 AverageTime E A 1 1 1 E E E E E E E I 1 1 I 1 1 E E E E E U 11 NANOSECONDS E E 
+JMH S 37 com.learning.benchmark.BenchmarkTests S 77 com.learning.benchmark.jmh_generated.BenchmarkTests_testInsertionSort_jmhTest S 17 testInsertionSort S 11 AverageTime E A 1 1 1 E E E E E E E I 1 1 I 1 1 E E E E E U 11 NANOSECONDS E E 
+JMH S 37 com.learning.benchmark.BenchmarkTests S 73 com.learning.benchmark.jmh_generated.BenchmarkTests_testMergeSort_jmhTest S 13 testMergeSort S 11 AverageTime E A 1 1 1 E E E E E E E I 1 1 I 1 1 E E E E E U 11 NANOSECONDS E E 

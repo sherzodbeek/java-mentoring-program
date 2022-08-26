@@ -1,6 +1,6 @@
 package com.epam;
 
-import com.epam.lfuCache.JavaLFUCacheService;
+import com.epam.lfu.JavaLFUCacheService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -39,5 +39,14 @@ class JavaLFUCacheTest {
         Element result = cacheService.get(11);
 
         Assertions.assertNull(result);
+    }
+
+    @Test
+    void shouldReturnNullIfElementNotFoundFromCacheLFU() {
+        cacheService.put(1, new Element(String.valueOf(1)));
+
+        Element element = cacheService.get(2);
+
+        Assertions.assertNull(element);
     }
 }
