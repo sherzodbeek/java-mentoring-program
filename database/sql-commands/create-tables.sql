@@ -27,3 +27,22 @@ CREATE TABLE exam_results
     FOREIGN KEY (subject_id)
         REFERENCES subjects (id)
 );
+
+CREATE INDEX idx_student_id
+    ON students USING btree(id);
+-- Before adding data - 37 msec.
+-- After adding data - 180 msec.
+
+CREATE INDEX idx_student_name
+    ON students USING hash(name);
+-- Before adding data - 68 msec.
+-- After adding data - 239 msec.
+
+CREATE INDEX idx_student_surname
+ON students USING gin(surname gin_trgm_ops);
+-- Before adding data - 33 msec.
+-- After adding data -  268 msec.
+
+SELECT
+    pg_size_pretty (pg_indexes_size('students'));
+-- check index of tables - 36 MB
