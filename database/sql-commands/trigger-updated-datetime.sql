@@ -7,7 +7,7 @@ begin
     NEW.updated_datetime := CURRENT_TIMESTAMP;
     return NEW;
 END;
-$$
+$$;
 
 create TRIGGER write_update_datetime
     before UPDATE
