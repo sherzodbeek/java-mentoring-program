@@ -27,3 +27,16 @@ CREATE TABLE exam_results
     FOREIGN KEY (subject_id)
         REFERENCES subjects (id)
 );
+
+CREATE TABLE student_address
+(
+    student_id int PRIMARY KEY,
+    address    text NOT NULL
+);
+
+CREATE TABLE student_address_audit
+(
+    student_id  int  NOT NULL,
+    old_address text NOT NULL,
+    new_address text NOT NULL
+);
