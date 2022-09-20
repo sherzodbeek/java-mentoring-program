@@ -30,7 +30,7 @@ public class DbConnection {
 
         String updateSql = "Update students set name = ? where id = ?";
         PreparedStatement ps = connect.prepareStatement(updateSql);
-        ps.setString(1, "Bonni");
+        ps.setString(1, "Bonn");
         ps.setInt(2, 1);
         ps.execute();
 
@@ -40,26 +40,28 @@ public class DbConnection {
         while (resultSet.next()) {
             System.out.println(resultSet.getString(2));
         }
+
         connect.commit();
-        connect.close();
-
-        // READ COMMITTED
-        DbConnection connection2 = new DbConnection();
-        Connection connect2 = connection2.connect();
-        connect2.setAutoCommit(false);
-
-        connect2.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
-
-        PreparedStatement ps3 = connect2.prepareStatement(updateSql);
-        ps3.setString(1, "Bonna");
-        ps3.setInt(2, 1);
-        ps3.execute();
-
-        Statement ps4 = connect2.createStatement();
-        ResultSet resultSet2 = ps4.executeQuery(selectSql);
-        while (resultSet2.next()) {
-            System.out.println(resultSet2.getString(2));
-        }
+//        connect.commit();
+//        connect.close();
+//
+//        // READ COMMITTED
+//        DbConnection connection2 = new DbConnection();
+//        Connection connect2 = connection2.connect();
+//        connect2.setAutoCommit(false);
+//
+//        connect2.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+//
+//        PreparedStatement ps3 = connect2.prepareStatement(updateSql);
+//        ps3.setString(1, "Bonna");
+//        ps3.setInt(2, 1);
+//        ps3.execute();
+//
+//        Statement ps4 = connect2.createStatement();
+//        ResultSet resultSet2 = ps4.executeQuery(selectSql);
+//        while (resultSet2.next()) {
+//            System.out.println(resultSet2.getString(2));
+//        }
+//    }
     }
-
 }
